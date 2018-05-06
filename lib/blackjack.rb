@@ -39,6 +39,13 @@ end
 
 def hit?(card_total)
   # code hit? here
+  prompt_user
+  response = get_user_input
+  until response == "h" || response == "s"
+    invalid_command
+    prompt_user
+    response = get_user_input
+  end  
 end
 
 def invalid_command
